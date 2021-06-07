@@ -1,0 +1,59 @@
+<style>
+.fa-youtube-play {
+  	width: 35px;
+  	 border:  none;
+    background: none;
+    color: red;
+    border-radius: 6px;
+  }
+  .fa-twitter {
+  	width: 30px;
+  	 border:  none;
+    background: none;
+    color: #55ACEE;
+    border-radius: 6px;
+  }
+
+.fa-linkedin {
+  	width: 30px;
+  	 border:  none;
+    background: none;
+    color:  #007bb5;
+    border-radius: 6px;
+  }
+  .fa-google-plus {
+  	width: 30px;
+  	 border:  none;
+    background: none;
+    color:  #ff1a1a;
+    border-radius: 6px;
+  }
+   .fa-instagram{
+  	width: 30px;
+  	 border:  none;
+    background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color:  white;
+    border-radius: 6px;
+  }
+   .fa-tumbr{
+  	width: 30px;
+  	 border:  none;
+    background: none;
+    color:  #2c4762;
+    border-radius: 6px;
+  }
+   .fa-pinterest{
+  	width: 30px;
+  	 border:  none;
+    background: #cb2027;
+    color:  white;
+    border-radius: 6px;
+  }
+   .fa-skype{
+  	width: 30px;
+  	 border:  none;
+    background: none;
+    color:  #00aff0;
+    border-radius: 6px;
+  }
+</style>

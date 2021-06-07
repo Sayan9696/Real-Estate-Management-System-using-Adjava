@@ -1,0 +1,232 @@
+-- This CLP file was created using DB2LOOK Version "9.7" 
+-- Timestamp: 14/04/2019 19:04:28
+-- Database Name: REMS           
+-- Database Manager Version: DB2/NT Version 9.7.0          
+-- Database Codepage: 1252
+-- Database Collating Sequence is: UNIQUE
+
+
+CONNECT TO REMS;
+
+
+
+------------------------------------
+-- DDL Statements for TABLESPACES --
+------------------------------------
+
+
+CREATE LARGE TABLESPACE "SYSTOOLSPACE" IN DATABASE PARTITION GROUP IBMCATGROUP 
+	 PAGESIZE 4096 MANAGED BY AUTOMATIC STORAGE 
+	 AUTORESIZE YES 
+	 INITIALSIZE 32 M 
+	 MAXSIZE NONE 
+	 EXTENTSIZE 4
+	 PREFETCHSIZE AUTOMATIC
+	 BUFFERPOOL IBMDEFAULTBP
+	 OVERHEAD 7.500000
+	 TRANSFERRATE 0.060000 
+	 NO FILE SYSTEM CACHING  
+	 DROPPED TABLE RECOVERY ON;
+
+
+CREATE USER TEMPORARY TABLESPACE "SYSTOOLSTMPSPACE" IN DATABASE PARTITION GROUP IBMCATGROUP 
+	 PAGESIZE 4096 MANAGED BY AUTOMATIC STORAGE 
+	 EXTENTSIZE 4
+	 PREFETCHSIZE AUTOMATIC
+	 BUFFERPOOL IBMDEFAULTBP
+	 OVERHEAD 7.500000
+	 TRANSFERRATE 0.060000 
+	 FILE SYSTEM CACHING  
+	 DROPPED TABLE RECOVERY OFF;
+
+
+-- Mimic tablespace
+
+ALTER TABLESPACE SYSCATSPACE
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      NO FILE SYSTEM CACHING 
+      AUTORESIZE YES 
+      TRANSFERRATE 0.060000;
+
+
+ALTER TABLESPACE TEMPSPACE1
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      FILE SYSTEM CACHING 
+      TRANSFERRATE 0.060000;
+
+
+ALTER TABLESPACE USERSPACE1
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      NO FILE SYSTEM CACHING 
+      AUTORESIZE YES 
+      TRANSFERRATE 0.060000;
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "LAPTOP  "."ADMIN"
+------------------------------------------------
+ 
+
+CREATE TABLE "LAPTOP  "."ADMIN"  (
+		  "ID" INTEGER NOT NULL , 
+		  "NAME" VARCHAR(20) , 
+		  "PASS" VARCHAR(30) , 
+		  "PHN" VARCHAR(10) , 
+		  "MAILID" VARCHAR(30) , 
+		  "ADDRESS" VARCHAR(30) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "LAPTOP  "."DEALER"
+------------------------------------------------
+ 
+
+CREATE TABLE "LAPTOP  "."DEALER"  (
+		  "DID" INTEGER NOT NULL , 
+		  "DNAME" VARCHAR(20) NOT NULL , 
+		  "DPASS" VARCHAR(20) NOT NULL , 
+		  "PHN" VARCHAR(20) , 
+		  "OFFICIALADDR" VARCHAR(30) , 
+		  "DMAILID" VARCHAR(30) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "LAPTOP  "."CUSTOMER"
+------------------------------------------------
+ 
+
+CREATE TABLE "LAPTOP  "."CUSTOMER"  (
+		  "CID" INTEGER NOT NULL , 
+		  "CNAME" VARCHAR(30) NOT NULL , 
+		  "CPASS" VARCHAR(30) NOT NULL , 
+		  "PHN" VARCHAR(10) , 
+		  "ADDRESS" VARCHAR(30) , 
+		  "CMAIL" VARCHAR(30) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "LAPTOP  "."RENT"
+------------------------------------------------
+ 
+
+CREATE TABLE "LAPTOP  "."RENT"  (
+		  "RID" INTEGER NOT NULL , 
+		  "RNAME" LONG VARCHAR NOT NULL , 
+		  "RTYPE" LONG VARCHAR , 
+		  "RAREA" INTEGER NOT NULL , 
+		  "RADDR" LONG VARCHAR , 
+		  "RLOC" VARCHAR(50) NOT NULL , 
+		  "RPRICE" INTEGER , 
+		  "RBED" LONG VARCHAR , 
+		  "RDRAW" LONG VARCHAR , 
+		  "RBIG" LONG VARCHAR , 
+		  "RDESC" LONG VARCHAR , 
+		  "B_ID" LONG VARCHAR , 
+		  "B_NAME" LONG VARCHAR , 
+		  "B_MAIL" LONG VARCHAR , 
+		  "B_ADDR" LONG VARCHAR )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "LAPTOP  "."PROPERTY"
+------------------------------------------------
+ 
+
+CREATE TABLE "LAPTOP  "."PROPERTY"  (
+		  "PID" INTEGER , 
+		  "PNAME" VARCHAR(50) , 
+		  "PTYPE" VARCHAR(50) , 
+		  "PAREA" VARCHAR(50) , 
+		  "PLOC" VARCHAR(50) , 
+		  "PRICE" INTEGER , 
+		  "PADDR" VARCHAR(50) , 
+		  "PBED" VARCHAR(1000) , 
+		  "PDRAW" LONG VARCHAR , 
+		  "BIG" VARCHAR(500) , 
+		  "DESC" LONG VARCHAR , 
+		  "BHK" VARCHAR(10) , 
+		  "BUIL_ID" INTEGER , 
+		  "BUIL_NAME" LONG VARCHAR , 
+		  "BUIL_MAIL" LONG VARCHAR , 
+		  "BUIL_ADDR" LONG VARCHAR )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "LAPTOP  "."IMAGES"
+------------------------------------------------
+ 
+
+CREATE TABLE "LAPTOP  "."IMAGES"  (
+		  "ID" INTEGER NOT NULL , 
+		  "IMG" BLOB(10485760) LOGGED NOT COMPACT NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "LAPTOP  "."CMP"
+------------------------------------------------
+ 
+
+CREATE TABLE "LAPTOP  "."CMP"  (
+		  "ID" INTEGER , 
+		  "NAME" VARCHAR(30) , 
+		  "MAILID" VARCHAR(30) , 
+		  "PHNNO" VARCHAR(10) , 
+		  "COMPLAIN" VARCHAR(100) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------
+-- Authorization statement on table space 
+---------------------------------------
+
+ 
+GRANT USE OF TABLESPACE "SYSTOOLSTMPSPACE" TO  PUBLIC   ;
+
+COMMIT WORK;
+
+CONNECT RESET;
+
+TERMINATE;
+
+-- Generate statistics for all creators 
+-- Creating DDL for table(s)
+;

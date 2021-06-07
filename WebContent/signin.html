@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="icon" href="image/d.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/social.css">
+<body>
+
+<div class="w3-display-container">
+  <div class="w3-bar w3-black w3-border">
+    <a href="Rlogin.jsp" class="w3-bar-item w3-btn w3-center w3-mobile">Makanmalik.com<img src="image/d.png" alt="" style="width: 20px"></a>
+    
+    
+</div>
+   <br>
+
+<title>registration pages</title>
+</head>
+<style>
+.button {
+		background-color:black;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		curser: pointer;
+}
+body{
+		background-image: url(103.jpg);
+		background-repeat: no-repeat;
+		background-position:top;
+		background-size: cover;
+	}
+</style>
+<body>
+<form class="w3-container" action="signup.jsp">
+  
+  <h1><font color="black"><center><b><u>Signup<u></b></center></font></h1>
+
+  <p><input class="w3-input w3-border w3-hover-black" type="text" id="c" name="cname" placeholder="enter name"></p>
+  <p><input class="w3-input w3-border w3-hover-black" type="text" id="pw" name="pw" placeholder="enter password"></p>
+  <p><input class="w3-input w3-border w3-hover-black" type="text" id="p" name="ph" placeholder="enter phnno"></p>
+  <p><input class="w3-input w3-border w3-hover-black" type="text" id="m" name="ml" placeholder="enter mailid"></p>
+  <p><input class="w3-input w3-border w3-hover-black" type="text" id="a" name="addr" placeholder="enter address"></p>
+<input type="submit" class="button" value="submit" onclick="age()">
+</font>
+</form>
+
+    <script>
+function age(){
+	
+
+
+	
+
+	var c=document.getElementById("c").value;
+	
+	if(c==""){
+		alert("please enter name");
+	return false	
+	}
+	else
+	{
+		var letters=/^[a-zA-z ]+$/;
+		if(c.match(letters))
+			{
+			
+			}
+		else
+			{
+			alert("please enter only character in name section");
+			return false}
+		
+	}
+	
+	
+var pw=document.getElementById("pw").value;
+	
+	if(pw==""){
+		alert("please enter password");
+	return false	
+	}	
+	
+	
+	
+	var ph=document.getElementById("p").value;
+	if(ph==""){
+		alert("please enter phn no");
+	return false	}	
+	else
+		{
+		var n=ph.length;
+		var letters=/^[0-9]+$/;
+		if(ph.match(letters))
+			{
+			if(n<10){
+				alert("please enter 10 digit number in phnno section");
+			return false}
+		
+						}
+		else
+			{
+			alert("please enter only number in phnno section");
+			return false}
+		
+		}
+
+var m=document.getElementById("m").value;
+	
+	if(m==""){
+		alert("please enter mail id");
+		return false}
+	else
+		{
+		if((m.indexOf("@"))<0)
+			alert("mail is incorrect");return false
+		}
+	
+	
+	
+}
+	
+</script>
+
+
+</body>
+</html>

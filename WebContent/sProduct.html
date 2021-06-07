@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<body bgcolor="#000000">
+
+
+  <title>sProduct</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <link rel="icon" href="image/d.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+
+
+
+   .page-body {
+
+     margin: 60px;
+      
+
+  }
+      a:link{
+            color: black;
+            text-decoration: none;
+        }
+      
+      a:hover {
+        color: red;
+    }
+        .logo:hover{
+            color: black;
+            text-decoration: none;
+        }
+
+
+
+.input_field {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*
+input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+*/
+  </style>
+
+
+
+    
+    <body>
+    
+       <body class="w3-black">
+
+<div class="w3-sidebar w3-bar-block w3-animate-opacity w3-white" style="display:none;z-index:5;right:0;" id="mySidebar">
+    <button class="w3-bar-item w3-btn w3-center" style= "font-size: 20px;color:red;background-color:black;" onclick="w3_close()" ><b>X</b></button>
+    <a href="" class="w3-bar-item w3-btn w3-center" style= "font-size: 20px;">Rent Product</a>
+    <a href="" class="w3-bar-item w3-btn w3-center" style= "font-size: 20px;">Buy Product</a>
+    <a href="" class="w3-bar-item w3-btn w3-center" style= "font-size: 20px;">Sell Product</a>
+    <a href="" class="w3-bar-item w3-btn w3-center" style= "font-size: 20px;">Customer Service</a>
+    <a href="" class="w3-bar-item w3-btn w3-center" style= "font-size: 20px;">login & signup</a>
+    
+  </div>
+
+<!-- Page Content -->
+<div class="w3-overlay-white w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+  <div class="w3-bar w3-card">
+  <a class="w3-bar-item w3-btn w3-right logo"
+  style="font-size: 20px;color: white;" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+
+
+
+  <div class="w3-bar w3-red w3-border">
+        <a href="index.html" class="w3-bar-item w3-btn w3-center w3-mobile logo">Makanmalik.com<img src="image/d.png" alt="" style="width: 20px"></a>
+     
+        <div class="w3-dropdown-hover w3-red w3-border" style="width: 15%;text-align: center">
+          <button class="w3-btn">All Residential<i class="fa fa-chevron-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4" style="width: 15%;">
+            <a href="#" class="w3-bar-item w3-btn w3-center"><input type="checkbox" class="check"> Location</a>
+            <a href="#" class="w3-bar-item w3-btn w3-center"><input type="checkbox" class="check"> Floor</a>
+            <a href="#" class="w3-bar-item w3-btn w3-center"><input type="checkbox" class="check"> Apartment Type</a>
+            <a href="#" class="w3-bar-item w3-btn w3-center"><input type="checkbox" class="check"> Price Range</a>
+
+          </div>
+        </div>
+          
+
+        <input type="text" class="w3-bar-item w3-input w3-white w3-mobile" style="width: 500px;" placeholder="Search for building, apartment and more..">
+        <button class="w3-bar-item w3-btn w3-center w3-white w3-mobile"><i class="fa fa-search"></i></button>
+        
+        <a class="w3-bar-item w3-mobile w3-right" style="width: 50px;"></a>
+        <a href="customer_service.html" class="w3-bar-item w3-btn w3-center w3-mobile w3-right logo">Customer Service</a>
+        
+        
+
+      </div>
+     
+     <br>
+     <br>   <h2 class="w3-center w3-text-light-green"><b>Sell Property</b></h2>
+    
+
+
+    <br>
+
+    <div class="w3-display-container w3-center">
+    <div class="w3-row w3-center">
+     
+     
+     <div class="w3-half">
+         <div class="w3-row w3-center">
+            
+             <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/8.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+              
+              <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/10.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+             
+             
+         </div>
+         
+         
+     </div>
+     
+     <div class="w3-half">
+         
+         <div class="w3-row w3-center">
+             
+             <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/8.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+              
+              
+              <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/10.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+             
+             
+         </div>
+         
+         
+     </div>
+      
+      
+    </div>
+    </div>
+    <br>
+    <div class="w3-display-container w3-center">
+    <div class="w3-row w3-center">
+     
+     
+     <div class="w3-half">
+         <div class="w3-row w3-center">
+            
+             <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/8.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+              
+              <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/10.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+             
+             
+         </div>
+         
+         
+     </div>
+     
+     <div class="w3-half">
+         
+         <div class="w3-row w3-center">
+             
+             <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/8.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+              
+              
+              <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/10.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+             
+             
+         </div>
+         
+         
+     </div>
+      
+      
+    </div>
+    </div>
+    <br>
+    <div class="w3-display-container w3-center">
+    <div class="w3-row w3-center">
+     
+     
+     <div class="w3-half">
+         <div class="w3-row w3-center">
+            
+             <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/8.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+              
+              <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/10.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+             
+             
+         </div>
+         
+         
+     </div>
+     
+     <div class="w3-half">
+         
+         <div class="w3-row w3-center">
+             
+             <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/8.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+              
+              
+              <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/10.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+             
+             
+         </div>
+         
+         
+     </div>
+      
+      
+    </div>
+    </div>
+
+
+
+    <div class="w3-display-container w3-center">
+    <div class="w3-row w3-center">
+     
+     
+     <div class="w3-half">
+         <div class="w3-row w3-center">
+            
+             <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/8.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+              
+              <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/10.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+             
+             
+         </div>
+         
+         
+     </div>
+     
+     <div class="w3-half">
+         
+         <div class="w3-row w3-center">
+             
+             <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/8.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+              
+              
+              <div class="w3-half w3-container" style="">
+                  <img class="w3-image" src="image/10.jpg" alt="">
+                  <div class="w3-grey w3-center" style="padding: 20px">
+                      <a href="#">
+                          <b>Green Enclave</b>
+                          <br>
+                          ABC Group
+                          <br>
+                          Kolkata
+                      </a>
+                  </div>
+              </div>
+             
+             
+         </div>
+         
+         
+     </div>
+      
+      
+    </div>
+    </div>
+
+     <div class="w3-container w3-dark-gray  w3-row w3-panel w3-topbar w3-bottombar w3-border-dark-gray ">
+     
+          
+
+<div class="w3-third w3-container w3-center ">
+   
+<h4 class="w3-center "><b>REAL ESTATE IN INDIA</b></h4>
+<a href="url">link text</a>    <a href="url">link text</a> <br>
+<a href="url">link text</a>    <a href="url">link text</a> <br>
+<a href="url">link text</a>    <a href="url">link text</a> <br>
+<a href="url">link text</a>    <a href="url">link text</a> <br>
+<a href="url">link text</a>    <a href="url">link text</a> <br>
+<a href="url">link text</a>    <a href="url">link text</a> <br>
+<a href="url">link text</a>    <a href="url">link text</a> <br>
+<a href="url">link text</a>    <a href="url">link text</a> <br>
+</div>
+
+
+<div class="w3-third w3-container w3-center">
+
+<h4 class="w3-center"><b>COMPANY</b></h4>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+
+</div>
+
+
+<div class="w3-third w3-container w3-center">
+  
+<h4 class="w3-center"><b>Our Partner</b></h4>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+<a href="url">link text</a>     <br>
+</div>
+
+</div>
+   
+   <div class="w3-container w3-dark-gray  w3-row w3-panel w3-topbar w3-bottombar w3-border-dark-gray">
+     
+       <b>Disclaimer:</b> Magicbricks Realty Services Limited is only an intermediary offering its platform to facilitate the transactions between Seller and Customer/Buyer/User and is not and cannot be a party to or control in any manner any transactions between the Seller and the Customer/Buyer/User. All the offers and discounts on this Website have been extended by various Builder(s)/Developer(s) who have advertised their products. Magicbricks is only communicating the offers and not selling or rendering any of those products or services. It neither warrants nor is it making any representations with respect to offer(s) made on the site. Magicbricks Realty Services Limited shall neither be responsible nor liable to mediate or resolve any disputes or disagreements between the Customer/Buyer/User and the Seller and both Seller and Customer/Buyer/User shall settle all such disputes without involving Magicbricks Realty Services Limited in any manner.
+</div>
+
+
+
+  
+  
+    
+     
+     
+     
+     
+     
+     
+      <footer class="w3-gray w3-card  w3-animate-bottom"  style="margin-top: 0%">
+        <div class="w3-container w3-center">
+            <div class="w3-animate-zoom">
+
+        <a href="https://www.facebook.com" style= "width: 30px;color: white;border-radius: 10%;font-size: 20px; background-color:#3B5998;padding:5px 10px 1px 10px"><i class="fa fa-facebook"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=918436475478&text=Hi, I contacted you Through your website." class="social-icon whatsapp"><i class="fa fa-whatsapp" style= "background-color:#00e676;color:white;font-size: 30px;border-radius: 100%;"></i></a>
+    <a href="https://www.youtube.com" ><i class="fa fa-youtube-play" style="font-size: 30px;color:red;"></i></a>
+    <a href="https://twitter.com" ><i class="fa fa-twitter" style="font-size: 30px;"></i></a>
+    <a href="http://raifoundation.in//rai.apk"><i class="fa fa-android" style= "color:#a4c639;font-size: 30px;border-radius: 5%;"></i></a>
+    <a href="https://plus.google.com/u/0/113156361321846797916"><i class="fa fa-google-plus" style="font-size: 25px;"></i></a>
+    <a href="https://www.instagram.com/" ><i class="fa fa-instagram" style="font-size: 27px;"></i></a>
+    <a href="https://www.tumblr.com/blog"><i class="fa fa-tumblr" style="font-size: 28px;color:  #2c4762;"></i></a>
+    <a href="https://in.pinterest.com/"><i class="fa fa-pinterest" style="font-size: 25px;"></i></a>
+        </div>
+        </div>
+    </footer>
+   
+    </body>
+
+    <script src="js/index.js"></script>
+    <script src="js/nav.js"></script>
+    </html>
