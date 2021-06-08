@@ -1,4 +1,4 @@
-# Real Estate Management System using Adjava
+# Real Estate Management System using Advance Java
 Real Estate Management System (REMS) is an online real estate software application that manages the overall operational activities and processes, starting from the management of the property, to the management of real estate agencies, agents, clients and financial informations. Admin can restrict & manage the activities of the agents and users.
 
 ## Proposed System and its Advantages
